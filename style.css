@@ -1,0 +1,615 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+   
+}
+.darkpage{
+    background-color: var(--body-color);
+    color: var(--body-text-color);
+}
+:root{
+    --color-header: #00242A;
+    --main-color: #053542;
+    --main-lite-color:#025968;
+    --seconde-color: #3693AC;
+    --white-color:#ffffff;
+    --grey-color:#4B5563;
+    --black-color:#000000;
+    --body-color:#ffffff;
+    --body-text-color:#000000;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-lite-color:rgba(0, 0, 0, 0.1);
+}
+.darkColors{
+    --color-header: #000000;
+    --main-color: #ffffff;
+    --main-lite-color:#3693AC;
+    --seconde-color: #ffffff;
+    --white-color:#000000;
+    --grey-color:#ffffff;
+    --black-color:#ffffff;
+    --body-color:#060606fd;
+    --body-text-color:#ffffff;
+    --shadow-color: rgba(255, 255, 255, 0.3);
+    --shadow-lite-color:rgb(2, 45, 95,0.5);
+}
+
+
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    box-shadow: 0 0 10px var(--shadow-lite-color);
+    /* position: fixed; */
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--grey-color);
+}
+.logo span{
+    color: var(--main-lite-color);
+}
+header ul{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+header ul li{
+    font-weight: 600;
+    padding: 10px;
+    
+}
+header ul li a{
+    color: var(--main-lite-color);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+header ul li a:hover{
+    color: var(--seconde-color);
+}
+.active{
+    color: var(--seconde-color);
+}
+
+.button {
+    color: var(--main-color);
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 10px #3693AC;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px; 
+}
+ .button:hover{
+    color: var(--white-color);
+    background-color: var(--main-color);    
+    box-shadow: 0 0px 10px var(--shadow-lite-color);
+}
+
+.hero{
+    height: 85vh;
+    width: 100vw;
+    background-image: url("/images/bg.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+}
+main{
+    width: 80%;
+    text-align: center;
+}
+main h1 {
+    font-size: 3rem;
+    font-family: "Inknut Antiqua", serif;
+    color: #ffffff;
+}
+
+main p {
+    font-size: 1.2rem;
+    padding: 20px;
+    color: #ffffff;
+   
+}
+
+main button {
+    padding: 9px 20px;
+    font-size: 1rem;
+    margin: 10px;
+    border-radius: 6px;
+    border: none;
+    color: var(--main-color);
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 10px #3693AC;
+    cursor: pointer;
+}
+main button:hover{
+    color: var(--white-color);
+    background-color: var(--main-color);    
+    box-shadow: 0 2px 10px var(--shadow-lite-color);
+}
+.container{
+    width: 85vw;
+    margin: 0 auto;
+}
+
+.slider {
+    margin-top: 50px;
+    height: 500px;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px var(--shadow-lite-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.slider h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: "Inknut Antiqua", serif;
+    margin-bottom: 50px;
+}
+.slider h2 span{
+    color: #3693AC;
+}
+.slider-box{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.card-box {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+
+ .switch-left{
+    position: absolute;
+    left: 15px;
+ }
+ .switch-right{
+    position: absolute;
+    right: 15px;
+ }
+.card-box .card {
+    min-width:220px;
+    height: 300px;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px var(--shadow-lite-color);
+    border-radius: 10px;
+    text-align: center;
+    animation: scrolle 20s linear infinite;
+}
+@keyframes scrolle {
+    from{
+        transform: translateX(500px);
+    }
+    to{
+        transform: translateX(-500px);
+    }
+}
+.card img{
+    height: 85%;
+    width: 100%;
+}
+
+.card h4 {
+    color: var(--grey-color);
+}
+.card h4 span{
+    color: var(--main-lite-color);
+}
+ .search-cat{
+    margin-top: 40px;
+ }
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.search input{
+    width: 70%;
+    padding: 9px 15px;
+    border: 1px solid #3693AC;
+    border-radius: 4px;
+    background-color:var(--body-color);
+    margin: 20px 0;
+    color: var(--grey-color);
+    font-size: 12px;
+
+}
+
+.menu-trie button{
+    width: 180px;
+    padding: 5px 15px;
+    background-color: var(--white-color);
+    color: var(--body-text-color);
+    border: 1px solid #3693AC;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.menu-trie button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-trie .options{
+      display: none;
+      position: absolute;
+      background-color: var(--white-color);
+      box-shadow: 0 2px 10px var(--shadow-lite-color);
+      border-radius: 6px;
+      overflow: hidden;
+}
+.menu-trie .options a{
+    color: var(--black-color);
+    padding: 9px 16px;
+    text-decoration: none;
+    display: block;
+}
+.menu-trie .options a:hover{
+    background-color: #3693ac1f;
+}
+.menu-trie:hover .options{
+    display: block;
+}
+.categorie{
+    background-color: #c7c7c71f;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.categorie .cat1, .categorie .cat2{
+   height: 400px;
+   text-align: center;
+}
+.cat1 h1, .cat2 h1{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Inknut Antiqua", serif;
+    color: var(--black-color);
+   
+}
+.cat1 h1 span, .cat2 h1 span{
+   color: var(--main-lite-color);
+}
+.cat-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cat-box .card {
+    width:240px;
+    height: 300px;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px var(--shadow-lite-color);
+    border-radius: 10px;
+}
+.cat-box .card:hover{
+    transform: translateY(5px);
+    transition: transform 0.5s ease-out;
+}
+
+/* -------------------------------------  page details product */
+
+.page{
+    padding: 50px 0;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+  
+}
+/* ------------------ en haute left => la photo de film -----------------*/
+
+.film-details {
+    width: 50%;
+}
+.film-details img{
+   width: 100%;
+}
+
+/* ---------- en haute rignt => partie des commentaire ajouter -----------*/
+.comments {
+    width: 50%;
+    padding:  0 24px;
+}
+.comment-box{
+    height: 240px;
+    width: 100%;
+    border: 1px solid var(--seconde-color);
+    padding: 20px;
+    overflow: auto;
+}
+.comments h3{
+    padding-bottom: 10px;
+}
+
+.comment-n{
+   width: 80%;
+   border-bottom: 1px solid var(--grey-color);
+   margin-bottom: 20px;
+}
+.author{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--grey-color);
+    margin-bottom: 10px;
+}
+.author img{
+    width: 18px;
+}
+.comments h2 {
+    color: var(--main-lite-color);
+    margin-bottom: 10px;
+}
+
+.comment {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--grey-color);
+}
+
+/* ------------------- fin de box des commentaires --------------------- */
+
+/* ------------- box de details & ajoute des commentaires ------------- */
+.box-dts-cmt{
+    display: flex;
+    gap: 20px;
+}
+/* ------------------- details de film ----------------- */
+.detailsFilm{
+    width: 50%;
+}
+.detailsFilm .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detailsFilm .aime{
+    margin-right: 20px;
+    color: var(--main-lite-color);  
+    font-weight: 600;
+}
+.detailsFilm .title h2 {
+    color: var(--main-lite-color);
+    padding: 15px 0;
+}
+
+.note{
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--main-lite-color);
+    display: inline-block;
+}
+
+.stars{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2rem;
+    justify-content: flex-end;
+    padding-bottom: 10px; 
+}
+.stars input {
+    display: none;
+}
+
+.stars label {
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.stars input:checked ~ label, .stars label:hover, .stars label:hover ~ label {
+    color: #3693AC;
+}
+
+.rate-message{
+    padding: 10px 0;
+    font-size: 18px;
+    color:#3693AC;
+}
+.btn-add{
+    background-color: var(--main-lite-color);
+    color: var(--white-color);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-add:hover{
+    background-color: var(--black-color);
+}
+.addComment{
+    width: 50%;
+    margin-top: 20px;
+}
+
+.addComment h2 {
+    color: var(--main-lite-color);
+    margin-bottom: 10px;
+}
+
+.addComment textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--body-color);
+    color: var(--body-text-color);
+    border: 1px solid #3693AC;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.addComment button {
+    background-color: var(--main-lite-color);
+    color: var(--white-color);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.addComment button:hover{
+    background-color: var(--black-color);
+}
+ /* --------------- end details film page ---------------- */
+
+ /* ---------------- page favorate films ------------------ */
+ .container .title{
+    text-align: center;
+    
+ }
+.container .title h1{
+    font-size: 3rem;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    padding: 20px 0;
+    margin-top: 50px;
+    box-shadow: 0 2px 10px var(--shadow-lite-color);
+}
+.container .title h1 span{
+    color: #025968;
+}
+
+.maListe{
+    height: 700px;
+    margin-top: 50px 20px;
+    background-color: var(--white-color);
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px var(--shadow-lite-color);
+    margin-top: 50px;
+}
+.myCard{
+    width: 250px;
+    height: 340px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.myCard img{
+    width: 100%;
+    height: 85%;
+}
+
+.myCard button{
+    width: 100px;
+    margin: 10px 0;
+    padding: 5px 15px;
+    background-color: var(--black-color);
+    border: 1px solid var(--black-color);
+    color: var(--white-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.myCard button:hover{
+    background-color: var(--main-lite-color);
+}
+/* --------------------------------------- */
+
+
+
+
+/* --------footer ---------- */
+.box-footer-part{
+    box-shadow: 0 -5px 20px var(--shadow-lite-color);
+    /* margin-top: 50px; */
+    background-color: var(--white-color);
+}
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+} 
+.footer-container .part-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 2px solid #3693AC;
+}
+/* ----------------- footer part 1 content styling */
+.part-1 h5 {
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+.part-1 h5 span{
+    color: #3693AC;
+}
+.part-1 button{
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    color: var(--main-color);
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 10px #3693AC;
+}
+.part-1 button:hover{
+    color: var(--white-color);
+    border: none;
+    background-color: var(--main-color); 
+    cursor: pointer;   
+    box-shadow: 0 2px 10px var(--shadow-lite-color);
+    transform: translateY(-2px);
+    transition: transform 0.5s ease;
+}
+/* ----------------- footer part 2 content styling */
+.part-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.part-2 .sub-nav a {
+    text-decoration: none;
+    color:#3693AC;
+    font-size: 14px;
+    padding: 0 16px;
+    transition: color 0.3s;
+}
+
+.part-2 .sub-nav a:hover {
+    color: var(--seconde-color);
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons a i {
+    font-size: 18px; 
+    color: #3693AC;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover i {
+    color: var(--seconde-colorcolor); 
+    transform: scale(1.2); 
+}

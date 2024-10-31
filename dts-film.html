@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Details</title>
+</head>
+<body class="dark">
+    <div class="darkpage">
+        <header>
+            <div class="logo">Ciné<span>Flix</span></div>
+            <ul>
+                <li> <a href="index.html" class="active">Accueil</a></li>
+                <li> <a href="#categorie">Catégorie</a></li>
+                <li> <a href="#Populaire">Populaire</a></li>
+                <li> <a href="favorate.html">Ma Liste</a></li>
+            </ul>
+            <div class="left">
+                <!-- <span class="material-symbols-outlined">
+                    search
+                </span> -->
+                <a href="#" class="button">Inscription</a>
+            </div>
+           
+        </header>
+    
+        <div class="container dark"> 
+                <div class="page">
+                    <div class="content">
+                        <!-- ------------------------image------------------- -->
+                        <div class="film-details">
+                                <img src="/images/detaileFilm.jpg" alt="">
+                        </div>
+                        <!-- --------------------- comments ------------------- -->
+                        <div class="comments">
+                            <h2>Commentaires</h2>
+                            <div class="comment-box">
+                                <div class="comment-n">
+                                    <p class="comment">"Une performance visuelle impressionnante."</p>
+                                    <p class="author"><img src="/images/user.png" alt="">Adel ait el</p>
+                                </div>
+    
+                                <div class="comment-n">
+                                    <p class="comment">"Un chef-d'œuvre qui m'a tenu en haleine !"</p>
+                                    <p class="author"><img src="/images/user.png" alt="">Salah el dine</p>
+                                </div>
+    
+                                <div class="comment-n">
+                                    <p class="comment">"Un scénario bien ficelé avec des personnages attachants, j'ai adoré chaque minute !"</p>
+                                    <p class="author"><img src="/images/user.png" alt="">bader el dine</p>    
+                                </div>
+    
+                                <div class="comment-n">
+                                    <p class="comment">"Une performance visuelle impressionnante."</p>
+                                <p class="author"><img src="/images/user.png" alt="">Adel ait el</p>
+                                </div>
+                            
+    
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="box-dts-cmt">
+                        <div class="detailsFilm">
+                            <div class="title">
+                                <h2>Titre du film</h2>
+                                 <div class="aime">
+                                    <img src="/images/j'aime.svg" alt="" onclick="addAime()">
+                                    <span class="count">0</span>
+                                 </div>
+                                 
+                            </div>
+                            
+                            <p>Un thriller captivant où le héros se lance dans une quête pleine de mystères et de rebondissements. Suspense et émotions garantis !</p>   
+                        
+                            <p class="note">Notez vous ce film :</p>
+    
+                            <div class="stars">
+    
+                                
+                                <input type="radio" id="star1" value="1" />
+                                <label for="star1" title="1 étoile">★</label>
+                                
+                                <input type="radio" id="star2"  value="2" />
+                                <label for="star2" title="2 étoiles">★</label>
+    
+                                <input type="radio" id="star3" value="3" />
+                                <label for="star3" title="3 étoiles">★</label>
+    
+                                <input type="radio" id="star4" value="4" />
+                                <label for="star4" title="4 étoiles">★</label>
+
+                                <input type="radio" id="star5" value="5" />
+                                <label for="star5" title="5 étoiles">★</label>
+                                
+                            </div>
+                            <button class="btn-add">Ajouter à ma liste</button>
+                        </div>
+        
+                        <div class="addComment">
+                            <h2>Ajoutez votre commentaire</h2>
+                            <textarea placeholder="Exprimez votre avis .." rows="6" id="userComment"></textarea>
+                            <button type="submit" onclick="addComment()">Envoyer votre commentaire</button>
+                        </div>
+                    </div>
+                
+                </div>
+        </div>
+    </div>
+   
+
+    <div class="box-footer-part dark">
+        <footer>
+            <div class="footer-container">
+                <div class="part-1">
+                    <h5>Ciné<span>Flix</span></h5>
+                    <button onclick="changeMode()">Mode Sombre</button>
+                </div>
+                <!-- ------------------------------------------------ -->
+                <div class="part-2">
+                        <div class="sub-nav">
+                            <a href="index.html">Accueil</a>
+                            <a href="dts-film.html">Films</a>
+                            <a href="index.html">Catégorie</a>
+                            <a href="#">Blog</a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.x.com"><i class="fa-solid fa-x"></i></a>
+                            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                   </div>
+               <!-- ------------------------------------------------- -->
+         </div>
+        </footer>
+    </div> 
+
+ <script src="index.js"></script>
+</body>
+</html>
