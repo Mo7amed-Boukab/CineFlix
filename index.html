@@ -43,11 +43,11 @@
         <h2>Collection des <span>Films</span> les Plus <span>Populaires</span></h2>
         <div class="slider-box">
             <div class="switch-left">
-                <img src="/images/left.svg" alt="">
+                <img src="/images/left.svg" alt="" id="left">
             </div>
             <div class="card-box">
             
-                        <!-- cart 1 -->
+                <!-- cart 1 -->
                 <div class="card">
                     <img src="/images/film2.jpg" alt="">
                     <h4>Titre du film<br><span>2022</span></h4>
@@ -68,7 +68,29 @@
                     <img src="/images/film7.jpg" alt="">
                     <h4>Titre du film<br><span>2024</span></h4>
                 </div>
-
+                
+                    <!-- cart 1 -->
+                    <div class="card">
+                        <img src="/images/film2.jpg" alt="">
+                        <h4>Titre du film<br><span>2022</span></h4>
+                    </div>
+    
+                    <!-- cart 2 -->
+                    <div class="card">
+                        <img src="/images/film1.jpg" alt="">
+                        <h4>Titre du film<br><span>2023</span></h4>
+                    </div>
+                    <!-- cart 3 -->
+                    <div class="card">
+                        <img src="/images/film5.jpg" alt="">
+                        <h4>Titre du film<br><span>2024</span></h4>
+                    </div>
+                    <!-- cart 4 -->
+                    <div class="card">
+                        <img src="/images/film7.jpg" alt="">
+                        <h4>Titre du film<br><span>2024</span></h4>
+                    </div>
+    
                 <!-- cart 5 -->
                 <div class="card">
                     <img src="/images/film11.jpg" alt="">
@@ -90,10 +112,11 @@
                     <img src="/images/film4jpg.jpg" alt="">
                     <h4>Titre du film<br><span>2024</span></h4>
                 </div>
-        
+                
+             
             </div> 
             <div class="switch-right">
-                <img src="/images/right.svg" alt="">
+                <img src="/images/right.svg" alt="" id="right">
             </div>
         </div>
 
@@ -101,7 +124,7 @@
 
     <section id="categorie" class="search-cat">
     <div class="search">
-        <input type="search" placeholder="Recherchez un film, un acteur ou un réalisateur...">
+        <input type="search" placeholder="Recherchez un film, un acteur ou un réalisateur..." id="searchInput">
             <div class="menu-trie">
                 <button><span class="material-symbols-outlined">arrow_drop_down</span>Tous les catégories</button>
                 <div class="options">
@@ -117,60 +140,60 @@
     
         <div class="cat1">
             <h1>Catégorie 1 : <span>Action</span></h1>
-            <div class="cat-box">
+            <div class="cat-box" id="silderCat1">
                         <!-- cart 1 -->
-                        <div class="card">
+                        <div class="card film">
                             <img src="/images/film2.jpg" alt="">
-                            <h4>Titre du film<br><span>2022</span></h4>
+                           <a href="dts-film.html"><h4 class="title">Mer de Feu<br><span>2022</span></h4></a>
                         </div>
             
                         <!-- cart 2 -->
-                        <div class="card">
+                        <div class="card film">
                             <img src="/images/film1.jpg" alt="">
-                            <h4>Titre du film<br><span>2023</span></h4>
+                            <a href="dts-film.html"><h4 class="title">Évasion<br><span>2023</span></h4></a>
                         </div>
                         <!-- cart 3 -->
-                        <div class="card">
+                        <div class="card film">
                             <img src="/images/film5.jpg" alt="">
-                            <h4>Titre du film<br><span>2024</span></h4>
+                            <a href="dts-film.html"><h4 class="title">Impact Fatal<br><span>2024</span></h4></a>
                         </div>
                         <!-- cart 4 -->
-                        <div class="card">
+                        <div class="card film">
                             <img src="/images/film7.jpg" alt="">
-                            <h4>Titre du film<br><span>2024</span></h4>
+                            <a href="dts-film.html"><h4 class="title">Zone Rouge<br><span>2024</span></h4></a>
                         </div>
             </div>
         </div>
         <div class="cat2">
             <h1>Catégorie 2 : <span>Aventure</span></h1>
-            <div class="cat-box">
+            <div class="cat-box" id="silderCat2">
                         <!-- cart 5 -->
-                <div class="card">
+                <div class="card film">
                     <img src="/images/film13.jpg" alt="">
-                    <h4>Titre du film<br><span>2023</span></h4>
+                     <a href="dts-film.html"><h4 class="title">Revanche<br><span>2021</span></h4></a>
                 </div>
                     <!-- cart 6 -->
-                <div class="card">
+                <div class="card film">
                     <img src="/images/film8.jpg" alt="">
-                    <h4>Titre du film<br><span>2022</span></h4>
+                    <a href="dts-film.html"><h4 class="title">Chasseur Noir<br><span>2022</span></h4></a>
                 </div>
 
                 <!-- cart 7 -->
-                <div class="card">
+                <div class="card film">
                     <img src="/images/film3.jpg" alt="">
-                    <h4>Titre du film<br><span>2023</span></h4>
+                    <a href="dts-film.html"><h4 class="title">Traque<br><span>2023</span></h4></a>
                 </div>
                 <!-- cart 8 -->
-                <div class="card">
+                <div class="card film">
                     <img src="/images/film4jpg.jpg" alt="">
-                    <h4>Titre du film<br><span>2024</span></h4>
+                    <a href="dts-film.html"><h4 class="title">Survivant<br><span>2024</span></h4></a>
                 </div>
                         
             </div>
         </div>
     </div>
     </section>
-
+    
     </div>
     </div>
         
@@ -201,6 +224,67 @@
         </footer>
     </div> 
         
-<script src="index.js"></script>
+<script>
+
+// carossel home page
+
+    let left = document.getElementById('left');
+    let rignt = document.getElementById('right');
+    let cartBox = document.querySelector('.card-box');
+        left.addEventListener('click', (e)=> {
+            cartBox.scrollBy({
+                top: 0,
+                left: -240,
+                behavior: "smooth",
+            });
+        });
+
+        right.addEventListener('click', (e)=> {
+            cartBox.scrollBy({
+                top: 0,
+                left: 240,
+                behavior: "smooth",
+            });
+        });
+
+
+       
+    // var autoScrollLeft = document.getElementById('silderCat1');
+    // var autoScrollRight = document.getElementById('silderCat2');
+    // const animation1 = [{transform: "translateX(500px)"} , {transform: "translateX(-500px)"}];
+    // const animation2 = [{transform: "translateX(-500px)"} , {transform: "translateX(500px)"}];
+    // const duration = { duration: 20000 , iterations: Infinity}
+    //     autoScrollLeft.animate( animation1, duration);
+    //     autoScrollRight.animate( animation2, duration);
+
+
+ // input search filter
+    
+    var input = document.getElementById('searchInput');
+
+    input.addEventListener('keydown', (e)=> {
+
+        var inputValue = e.target.value;
+        var films = document.querySelectorAll('.film');
+        films.forEach((item) => {
+            var title = item.querySelector('.title');
+            if (title.include(imputValue)) {
+                item.style.display="";
+            }
+            else{
+                item.style.display="none";
+
+            }
+        
+        })  
+    });    
+
+   // dark Mode 
+    function changeMode(){
+    var darkMode = document.querySelector(".dark");
+     darkMode.classList.toggle("darkColors");
+}
+
+</script>
 </body>
 </html>

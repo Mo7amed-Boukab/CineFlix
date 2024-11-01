@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="slider" id="Populaire">
+        <div class="switch-left">
+            <button id="left">Left</button>
+        </div>
+        <div class="card-box" style="display: flex; overflow: hidden; width: 300px;">
+            <div class="card" style="min-width: 200px; height: 100px; background-color: red;"></div>
+            <div class="card" style="min-width: 200px; height: 100px; background-color: blue;"></div>
+            <div class="card" style="min-width: 200px; height: 100px; background-color: green;"></div>
+        </div> 
+        <div class="switch-right">
+            <button id="right">Right</button>
+        </div>
+    </section>
+    
+    <script>
+        const leftButton = document.getElementById('left');
+        const rightButton = document.getElementById('right');
+        const cardBox = document.querySelector('.card-box');
+    
+        const scrollAmount = 500;
+    
+        leftButton.addEventListener('click', () => {
+            cardBox.scrollBy({
+                top: 0,
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    
+        rightButton.addEventListener('click', () => {
+            cardBox.scrollBy({
+                top: 0,
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+</body>
+</html>

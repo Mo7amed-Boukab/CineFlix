@@ -3,7 +3,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-   
+    box-sizing: border-box;
 }
 .darkpage{
     background-color: var(--body-color);
@@ -146,7 +146,7 @@ main button:hover{
 
 .slider {
     margin-top: 50px;
-    height: 500px;
+    height: 600px;
     background-color: var(--white-color);
     box-shadow: 0 0 10px var(--shadow-lite-color);
     padding: 50px 0;
@@ -174,9 +174,9 @@ main button:hover{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    overflow: hidden;
+    overflow-x: hidden;
+    background-color: var(--body-color);
 }
-
 
  .switch-left{
     position: absolute;
@@ -193,16 +193,17 @@ main button:hover{
     box-shadow: 0 0 10px var(--shadow-lite-color);
     border-radius: 10px;
     text-align: center;
-    animation: scrolle 20s linear infinite;
+    background-color: var(--white-color);
+    /* animation: scrolle 20s linear infinite; */
 }
-@keyframes scrolle {
+/* @keyframes scrolle {
     from{
         transform: translateX(500px);
     }
     to{
         transform: translateX(-500px);
     }
-}
+} */
 .card img{
     height: 85%;
     width: 100%;
@@ -274,6 +275,7 @@ main button:hover{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 40px;
+    overflow-x: hidden;
 }
 .categorie .cat1, .categorie .cat2{
    height: 400px;
@@ -496,7 +498,7 @@ main button:hover{
 }
 
 .maListe{
-    height: 700px;
+
     margin-top: 50px 20px;
     background-color: var(--white-color);
     padding: 50px 0;
@@ -530,7 +532,8 @@ main button:hover{
     cursor: pointer;
 }
 .myCard button:hover{
-    background-color: var(--main-lite-color);
+    background-color: #025968;
+    color: #fff;
 }
 /* --------------------------------------- */
 

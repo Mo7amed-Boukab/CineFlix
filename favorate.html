@@ -34,37 +34,37 @@
                
                 <div class="myCard">
                     <img src="/images/film2.jpg" alt="">
-                    <button>Supprimer</button>
+                    <button onclick="removeFilm()">Supprimer</button>
                 </div>
 
                 <div class="myCard">
                     <img src="/images/film1.jpg" alt="">
-                    <button>Supprimer</button>
+                    <button onclick="removeFilm()">Supprimer</button>
                 </div>
 
                 <div class="myCard">
                     <img src="/images/film5.jpg" alt="">
-                    <button>Supprimer</button>
+                    <button onclick="removeFilm()">Supprimer</button>
                 </div>
 
                 <div class="myCard">
                     <img src="/images/film7.jpg" alt="">
-                    <button>Supprimer</button>
+                    <button onclick="removeFilm()">Supprimer</button>
                 </div>
                     
                 <div class="myCard">
                     <img src="/images/film13.jpg" alt="">
-                    <button>Supprimer</button>
+                    <button onclick="removeFilm()">Supprimer</button>
                 </div>
 
                 <div class="myCard">
                     <img src="/images/film8.jpg" alt="">
-                    <button>Supprimer</button>
+                    <button onclick="removeFilm()">Supprimer</button>
                 </div>
 
                 <div class="myCard">
                     <img src="/images/film3.jpg" alt="">
-                    <button>Supprimer</button>
+                    <button onclick="removeFilm()">Supprimer</button>
                 </div>
                                 
             </section>
@@ -99,6 +99,40 @@
     </div> 
 </div>
 </div>
-<script src="index.js"></script>
+<script >
+    // remove a film from favorate list
+
+    function removeFilm(){
+
+    var listFilm=document.querySelector(".maListe");   
+        listFilm.removeChild(listFilm.firstElementChild);
+    }
+
+    // add a film to my favorate liste
+    
+    function addToList(){
+        var placeToAdd = document.querySelector(".maListe");
+        var div = document.createElement("div");
+        var img = document.createElement("img");
+            img.src = "/images/film13.jpg";
+        var a = document.createElement("a");
+        var title = document.createElement("h4");
+            a.appendChild()
+            placeToAdd.appendChild()=`
+
+                <div class="card">
+                        <img src="/images/film13.jpg" alt="">
+                        <a href="dts-film.html"><h4>Titre du film<br><span>2021</span></h4></a>
+                </div>
+
+            `;
+    }
+
+    // dark Mode 
+    function changeMode(){
+    var darkMode = document.querySelector(".dark");
+        darkMode.classList.toggle("darkColors");
+    }
+</script>
 </body>
 </html>
