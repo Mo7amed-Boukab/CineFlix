@@ -11,7 +11,7 @@
         <header>
             <div class="logo">Ciné<span>Flix</span></div>
             <ul>
-                <li> <a href="index.html" class="active">Accueil</a></li>
+                <li> <a href="home.html" class="active">Accueil</a></li>
                 <li> <a href="#categorie">Catégorie</a></li>
                 <li> <a href="#Populaire">Populaire</a></li>
                 <li> <a href="favorate.html">Ma Liste</a></li>
@@ -120,9 +120,9 @@
                 <!-- ------------------------------------------------ -->
                 <div class="part-2">
                         <div class="sub-nav">
-                            <a href="index.html">Accueil</a>
-                            <a href="dts-film.html">Films</a>
-                            <a href="index.html">Catégorie</a>
+                            <a href="home.html">Accueil</a>
+                            <a href="details.html">Films</a>
+                            <a href="#categorie">Catégorie</a>
                             <a href="#">Blog</a>
                         </div>
                         <div class="social-icons">
@@ -137,49 +137,6 @@
         </footer>
     </div> 
 
- <script>
-    // count j'aime in page details
-    var i=0;
-    function addAime(){
-    var count=document.querySelector('.count');
-    i++;
-    count.innerHTML=i;
-    }
-   // add comments
-    function addComment() {
-    var commentText = document.getElementById("userComment").value;
-
-    var container = document.querySelector(".comment-box");
-    var box_comment = document.createElement("div");
-    box_comment.className = "comment-n";
-    
-    var addParagraph = document.createElement("p");  
-    addParagraph.textContent = `"${commentText}"`; 
-    addParagraph.className = "comment";
-    box_comment.appendChild(addParagraph);
-
-    var author = document.createElement("p");
-    author.className = "author";
-
-    var icon = document.createElement("img");
-    icon.src = "/images/user.png"; 
-    icon.className = "user-icon";
-    author.appendChild(icon);
-
-    var authorName = document.createTextNode(" Vous");
-    author.appendChild(authorName);
-
-    box_comment.appendChild(author);
-    container.appendChild(box_comment);
-
-    document.getElementById("userComment").value = "";
-   }
-
-   // dark Mode 
-   function changeMode(){
-    var darkMode = document.querySelector(".dark");
-        darkMode.classList.toggle("darkColors");
-    }
- </script>
+ <script src="details.js"></script>
 </body>
 </html>

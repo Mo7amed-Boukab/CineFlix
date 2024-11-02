@@ -11,7 +11,7 @@
     <header>
         <div class="logo">Ciné<span>Flix</span></div>
         <ul>
-            <li> <a href="index.html" class="active">Accueil</a></li>
+            <li> <a href="home.html" class="active">Accueil</a></li>
             <li> <a href="#categorie">Catégorie</a></li>
             <li> <a href="#Populaire">Populaire</a></li>
             <li> <a href="favorate.html">Ma Liste</a></li>
@@ -81,9 +81,9 @@
                 <!-- ------------------------------------------------ -->
                 <div class="part-2">
                         <div class="sub-nav">
-                            <a href="index.html">Accueil</a>
-                            <a href="dts-film.html">Films</a>
-                            <a href="index.html">Catégorie</a>
+                            <a href="home.html">Accueil</a>
+                            <a href="details.html">Films</a>
+                            <a href="#categorie">Catégorie</a>
                             <a href="#">Blog</a>
                         </div>
                         <div class="social-icons">
@@ -99,40 +99,6 @@
     </div> 
 </div>
 </div>
-<script >
-    // remove a film from favorate list
-
-    function removeFilm(){
-
-    var listFilm=document.querySelector(".maListe");   
-        listFilm.removeChild(listFilm.firstElementChild);
-    }
-
-    // add a film to my favorate liste
-    
-    function addToList(){
-        var placeToAdd = document.querySelector(".maListe");
-        var div = document.createElement("div");
-        var img = document.createElement("img");
-            img.src = "/images/film13.jpg";
-        var a = document.createElement("a");
-        var title = document.createElement("h4");
-            a.appendChild()
-            placeToAdd.appendChild()=`
-
-                <div class="card">
-                        <img src="/images/film13.jpg" alt="">
-                        <a href="dts-film.html"><h4>Titre du film<br><span>2021</span></h4></a>
-                </div>
-
-            `;
-    }
-
-    // dark Mode 
-    function changeMode(){
-    var darkMode = document.querySelector(".dark");
-        darkMode.classList.toggle("darkColors");
-    }
-</script>
+<script src="favorate.js"> </script>
 </body>
 </html>
