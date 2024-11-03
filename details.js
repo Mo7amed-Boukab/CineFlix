@@ -2,16 +2,21 @@
 // ------------------------------------------------- Details page ----------------------------------------------
 
    // count j'aime in page details
+
    var i=0;
    function addAime(){
    var count=document.querySelector('.count');
    i++;
    count.innerHTML=i;
    }
-  // add comments
-   function addComment() {
-   var commentText = document.getElementById("userComment").value;
 
+
+//   add comments
+
+
+function addComment() {
+
+   var commentText = document.getElementById("userComment").value;
    var container = document.querySelector(".comment-box");
    var box_comment = document.createElement("div");
    box_comment.className = "comment-n";
@@ -39,7 +44,13 @@
   }   
 
 
-   //--------------------------------------------------- dark Mode ----------------------------------------------
+// add a film to my favorate liste
+
+function addToList(){
+  
+}
+
+//--------------------------------------------------- dark Mode ----------------------------------------------
 
  const savedTheme = localStorage.getItem("theme");
  var darkMode = document.querySelector(".dark");
@@ -59,5 +70,12 @@
               localStorage.setItem("theme", "light");
               console.log("dark mode not active");
           }
-      }
+    }
+
+
+// pull cartFilm info from localStorage
+
+ const filmSelected = JSON.parse(localStorage.getItem('filmSelected'));
+    document.getElementById('film-image').src = filmSelected.Image;
+    document.getElementById('film-title').textContent = filmSelected.title;
 

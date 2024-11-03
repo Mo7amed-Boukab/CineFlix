@@ -51,7 +51,7 @@ films.forEach((item) => {
 
  //--------------------------------------------------- dark Mode ----------------------------------------------
 
- const savedTheme = localStorage.getItem("theme");
+ var savedTheme = localStorage.getItem("theme");
  var darkMode = document.querySelector(".dark");
           if (savedTheme === "dark") {
               console.log(" dark theme exist");
@@ -71,3 +71,32 @@ films.forEach((item) => {
           }
       }
 
+
+//   ---------------------------- add to favorate 
+
+    var dataFilm = [
+        { Image : "/images/film2.jpg" , title : "Mer de Feu (2022)" },
+        { Image : "/images/film1.jpg" , title : "Évasion (2023)" },
+        { Image : "/images/film2.jpg" , title : "Mer de Feu (2022)" },
+        { Image : "/images/film1.jpg" , title : "Évasion (2023)" },
+        { Image : "/images/film5.jpg" , title : "Impact Fatal (2024)" },
+        { Image : "/images/film7.jpg" , title : "Zone Rouge (2024)" },
+        { Image : "/images/film8.jpg" , title : "Chasseur Noir (2022)" },
+        { Image : "images/film4jpg.jpg" , title : "Survivant (2024)" },
+        { Image : "images/film13.jpg" , title : "Revanche (2021)" },
+        { Image : "/images/film3.jpg" , title : "Traque (2023)" }
+    ];
+
+    var cards = document.querySelectorAll('.card');
+
+    cards.forEach((card, index) => {
+
+        var title = card.querySelector('a h4');
+
+        title.addEventListener('click', () => {
+            var film = dataFilm[index];
+  
+            localStorage.setItem('filmSelected', JSON.stringify(film));
+            window.location.href = 'details.html';
+        });
+    });

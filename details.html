@@ -17,9 +17,7 @@
                 <li> <a href="favorate.html">Ma Liste</a></li>
             </ul>
             <div class="left">
-                <!-- <span class="material-symbols-outlined">
-                    search
-                </span> -->
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="#" class="button">Inscription</a>
             </div>
            
@@ -30,7 +28,7 @@
                     <div class="content">
                         <!-- ------------------------image------------------- -->
                         <div class="film-details">
-                                <img src="/images/detaileFilm.jpg" alt="">
+                                <img src="/images/detaileFilm.jpg" alt="" id="film-image">
                         </div>
                         <!-- --------------------- comments ------------------- -->
                         <div class="comments">
@@ -64,9 +62,9 @@
                     <div class="box-dts-cmt">
                         <div class="detailsFilm">
                             <div class="title">
-                                <h2>Titre du film</h2>
+                                <h2 id="film-title">Titre du film</h2>
                                  <div class="aime">
-                                    <img src="/images/j'aime.svg" alt="" onclick="addAime()">
+                                    <img src="/images/j'aime.svg" alt="" onclick="addAime() ">
                                     <span class="count">0</span>
                                  </div>
                                  
@@ -77,8 +75,7 @@
                             <p class="note">Notez vous ce film :</p>
     
                             <div class="stars">
-    
-                                
+      
                                 <input type="radio" id="star1" value="1" />
                                 <label for="star1" title="1 étoile">★</label>
                                 
@@ -95,6 +92,7 @@
                                 <label for="star5" title="5 étoiles">★</label>
                                 
                             </div>
+
                             <button class="btn-add" onclick="addToList()">Ajouter à ma liste</button>
                         </div>
         

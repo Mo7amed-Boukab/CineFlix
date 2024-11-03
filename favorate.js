@@ -8,26 +8,6 @@
         listFilm.removeChild(listFilm.firstElementChild);
     }
 
-// add a film to my favorate liste
-    
-    function addToList(){
-        var placeToAdd = document.querySelector(".maListe");
-        var div = document.createElement("div");
-        var img = document.createElement("img");
-            img.src = "/images/film13.jpg";
-        var a = document.createElement("a");
-        var title = document.createElement("h4");
-            a.appendChild()
-            placeToAdd.appendChild()=`
-
-                <div class="card">
-                        <img src="/images/film13.jpg" alt="">
-                        <a href="dts-film.html"><h4>Titre du film<br><span>2021</span></h4></a>
-                </div>
-
-            `;
-    }
-
   //--------------------------------------------------- dark Mode ----------------------------------------------
 
   const savedTheme = localStorage.getItem("theme");

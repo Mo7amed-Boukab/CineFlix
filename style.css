@@ -183,7 +183,7 @@ main button:hover{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: var(--body-color);
 }
 
@@ -203,16 +203,8 @@ main button:hover{
     border-radius: 10px;
     text-align: center;
     background-color: var(--white-color);
-    /* animation: scrolle 20s linear infinite; */
 }
-/* @keyframes scrolle {
-    from{
-        transform: translateX(500px);
-    }
-    to{
-        transform: translateX(-500px);
-    }
-} */
+
 .card img{
     height: 85%;
     width: 100%;
@@ -288,7 +280,6 @@ main button:hover{
     overflow: hidden;
 }
 .categorie .cat1, .categorie .cat2{
-   height: 400px;
    text-align: center;
 }
 .cat1 h1, .cat2 h1{
@@ -332,18 +323,22 @@ main button:hover{
 
 .film-details {
     width: 50%;
+    height: 360px;
 }
 .film-details img{
    width: 100%;
+   height: 100%;
+   object-fit: fill;
 }
 
 /* ---------- en haute rignt => partie des commentaire ajouter -----------*/
 .comments {
     width: 50%;
     padding:  0 24px;
+    height: 360px;
 }
 .comment-box{
-    height: 240px;
+    height: 320px;
     width: 100%;
     border: 1px solid var(--seconde-color);
     padding: 20px;
@@ -426,6 +421,7 @@ main button:hover{
     font-size: 2rem;
     justify-content: flex-end;
     padding-bottom: 10px; 
+  
 }
 .stars input {
     display: none;
@@ -549,8 +545,6 @@ main button:hover{
 /* --------------------------------------- */
 
 
-
-
 /* --------footer ---------- */
 .box-footer-part{
     box-shadow: 0 -5px 20px var(--shadow-lite-color);
@@ -626,4 +620,88 @@ main button:hover{
 .social-icons a:hover i {
     color: var(--seconde-colorcolor); 
     transform: scale(1.2); 
+}
+
+@media screen  and (max-width: 800px){
+    header ul li{
+        display: none;
+    }
+    .left .button{
+        display: none;
+    }
+    main h1 {
+        font-size: 2rem;
+        font-weight: 900;
+
+    }
+    main p{
+        font-size:1rem ;
+    }
+    .slider h2{
+        font-size: 2rem;
+    }
+    .menu-trie{
+        display: none;
+    }
+    .search input{
+        width: 100%;
+    }
+    .comment,.author{
+        font-size: 0.6rem;
+    } 
+  
+}
+
+@media screen  and (max-width: 950px){
+    header ul li{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen  and (max-width: 555px){
+    .part-2 .sub-nav a{
+        font-size:
+    }
+    .part-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    .search{
+        margin-top: 100px;
+        height: 100px;
+
+    }
+    .search input{
+        width: 100%;
+    }
+    .menu-trie{
+        display: none;
+    }
+    .cat1 h1, .cat2 h1{
+        font-size: 1.5rem;
+    }
+    .film-details{
+        width: 60%;
+        margin-inline: auto;
+        margin-bottom: 10px;
+    }
+    .comments{
+        display: none;
+    }
+    .box-dts-cmt{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .detailsFilm , .addComment{
+        width: 90%;
+        margin-inline: auto;
+        text-align: center;
+    }
+    .stars{
+        justify-content: center;
+    }
+
+
 }
